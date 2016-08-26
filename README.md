@@ -2,6 +2,17 @@
 
 [<img src="https://secure.travis-ci.org/ryanb/nested_form.png?branch=master" alt="Build Status" />](http://travis-ci.org/ryanb/nested_form)
 
+## Fork Purpose
+This fork deals explicitly with the case where a form has multiple elements with the same association name. As a result of this, **double** nested forms cannot create the elements in the 2nd layer when the first layer is new. For example:
+
+* Post
+  * Comment
+    * Reply
+
+On a post page, a user will be able to comment, but not immediately reply without first reloading the page
+
+## Description
+
 This is a Rails gem for conveniently manage multiple nested models in a single form. It does so in an unobtrusive way through jQuery or Prototype.
 
 This gem only works with Rails 3. See the [rails2 branch](https://github.com/ryanb/nested_form/tree/rails2) for a plugin to work in Rails 2.
